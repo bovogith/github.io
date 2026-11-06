@@ -1,262 +1,194 @@
 <!DOCTYPE html>
-<html lang="ko" data-theme="dark">
+<html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="오픈소스 및 개발 프로젝트 아카이브 포트폴리오" />
-  <title>bovogith · Project Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="박장식의 게임 서버, 서비스 플랫폼, AI 기반 통합 개발 경력과 프로젝트를 소개합니다.">
+  <title>박장식 | 경력 포트폴리오</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header class="navbar">
-    <div class="container nav-inner">
-      <a href="#" class="logo">
-        <span class="logo-bracket">&lt;</span>bovogith<span class="logo-bracket">/&gt;</span>
-      </a>
-      <nav class="nav-links">
-        <a href="#projects">Projects</a>
-        <a href="#skills">Tech Stack</a>
-        <a href="#logs">Dev Notes</a>
-        <button id="theme-toggle" class="theme-btn" aria-label="테마 전환" title="다크/라이트 모드 전환">
-          <span class="theme-icon">☀️</span>
-        </button>
-      </nav>
+<body id="top">
+<a class="skip" href="#main">본문 바로가기</a>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="#top">PARK JANG-SIK</a>
+    <nav aria-label="주요 메뉴">
+      <a href="#expertise">핵심 역량</a><a href="#experience">실무</a><a href="#projects">프로젝트</a><a href="#career">경력</a><a href="#stack">기술 스택</a><a href="#snapshots">갤러리</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <section class="hero">
+    <div class="wrap hero-layout">
+      <div>
+        <p class="eyebrow">SENIOR SOFTWARE ARCHITECT  /  HANDS-ON TECH LEAD</p>
+        <h1>박장식</h1>
+        <p class="hero-title">게임 서버 · 서비스 플랫폼 · AI 기반 통합 개발</p>
+        <p class="hero-desc">아키텍처 의사결정부터 직접 구현, 시스템 연동, 테스트와 운영까지</p>
+        <div class="actions"><a class="button" href="#career">주요 경력 보기 <span aria-hidden="true">↓</span></a><a class="button secondary" href="#snapshots">프로젝트 화면 보기 <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <aside class="hero-aside" aria-label="경력 요약">
+        <p class="eyebrow">CAREER PORTFOLIO  /  NOVEMBER 2026</p>
+        <p class="years">20년 +</p>
+        <p class="years-label">총 경력</p>
+        <p>DevOps · Full Stack  ·  Node.js/TypeScript ·  C++ 분산 서버 ·  AI</p><p>PostgreSQL · MongoDB · Linux · Redis · AWS ·  Local AI  ·  IoT</p>
+      </aside>
     </div>
-  </header>
-
-  <main>
-    <!-- Hero Section -->
-    <section class="hero container">
-      <div class="hero-badge">Open Source &amp; Public Projects Archive</div>
-      <h1 class="hero-title">
-        코드와 결과물로 기록하는<br />
-        <span class="gradient-text">프로젝트 아카이브</span>
-      </h1>
-      <p class="hero-desc">
-        개인 식별 정보 없이 공개 가능한 소프트웨어 아키텍처, 자동화 도구, 웹 애플리케이션 및 실험적 토이 프로젝트들을 정리한 기술 포트폴리오 공간입니다.
-      </p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">프로젝트 둘러보기</a>
-        <a href="https://github.com/bovogith" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-          GitHub 저장소 ↗
-        </a>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section container">
-      <div class="section-header">
-        <div>
-          <h2 class="section-title">Featured Projects</h2>
-          <p class="section-subtitle">카테고리별로 분류된 공개 프로젝트 샘플 목록입니다.</p>
-        </div>
-        <div class="filter-group" role="tablist" aria-label="프로젝트 카테고리 필터">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="web">Web</button>
-          <button class="filter-btn" data-filter="tool">CLI &amp; Tools</button>
-          <button class="filter-btn" data-filter="ai">AI &amp; Data</button>
-        </div>
-      </div>
-
-      <div class="project-grid" id="project-grid">
-        <!-- Project Card 1 -->
-        <article class="project-card" data-category="web">
-          <div class="card-top">
-            <span class="card-category">Web Application</span>
-            <span class="card-status status-active">Public</span>
-          </div>
-          <h3 class="card-title">Static Portfolio Template</h3>
-          <p class="card-desc">
-            GitHub Pages를 활용해 별도의 빌드 서버나 프레임워크 의존성 없이 빠르게 배포 가능한 반응형 프로젝트 중심 정적 페이지입니다.
-          </p>
-          <ul class="tech-tags">
-            <li>HTML5</li>
-            <li>CSS Variables</li>
-            <li>Vanilla JS</li>
-            <li>GitHub Pages</li>
-          </ul>
-          <div class="card-links">
-            <a href="https://github.com/bovogith/github.io" target="_blank" rel="noopener noreferrer" class="card-link">Repository ↗</a>
-            <a href="#" class="card-link">Live Demo ↗</a>
-          </div>
-        </article>
-
-        <!-- Project Card 2 -->
-        <article class="project-card" data-category="tool">
-          <div class="card-top">
-            <span class="card-category">CLI &amp; Tools</span>
-            <span class="card-status status-sample">Sample</span>
-          </div>
-          <h3 class="card-title">Dev Workflow Automator</h3>
-          <p class="card-desc">
-            반복적인 로컬 빌드, 로그 정리, Git 브랜치 동기화 및 릴리즈 노트 초안 생성을 단일 명령어로 처리하는 경량 CLI 유틸리티입니다.
-          </p>
-          <ul class="tech-tags">
-            <li>TypeScript</li>
-            <li>Node.js</li>
-            <li>Shell Script</li>
-            <li>GitHub Actions</li>
-          </ul>
-          <div class="card-links">
-            <a href="https://github.com/bovogith" target="_blank" rel="noopener noreferrer" class="card-link">Source Code ↗</a>
-          </div>
-        </article>
-
-        <!-- Project Card 3 -->
-        <article class="project-card" data-category="ai">
-          <div class="card-top">
-            <span class="card-category">AI &amp; Data</span>
-            <span class="card-status status-sample">Sample</span>
-          </div>
-          <h3 class="card-title">DocuRAG Pipeline</h3>
-          <p class="card-desc">
-            마크다운 기술 문서를 청킹 및 임베딩하여 로컬 벡터 스토어에서 고속으로 검색하고 문맥 기반 요약을 제공하는 파이프라인 샘플입니다.
-          </p>
-          <ul class="tech-tags">
-            <li>Python</li>
-            <li>FastAPI</li>
-            <li>Vector DB</li>
-            <li>LLM API</li>
-          </ul>
-          <div class="card-links">
-            <a href="https://github.com/bovogith" target="_blank" rel="noopener noreferrer" class="card-link">Architecture ↗</a>
-          </div>
-        </article>
-
-        <!-- Project Card 4 -->
-        <article class="project-card" data-category="web">
-          <div class="card-top">
-            <span class="card-category">Web Application</span>
-            <span class="card-status status-sample">Sample</span>
-          </div>
-          <h3 class="card-title">Realtime Metric Dashboard</h3>
-          <p class="card-desc">
-            서버 리소스 상태와 API 응답 지연 시간을 웹소켓 스트림으로 수집해 경량 캔버스 차트로 시각화하는 모니터링 대시보드입니다.
-          </p>
-          <ul class="tech-tags">
-            <li>React</li>
-            <li>WebSocket</li>
-            <li>Tailwind CSS</li>
-            <li>Docker</li>
-          </ul>
-          <div class="card-links">
-            <a href="https://github.com/bovogith" target="_blank" rel="noopener noreferrer" class="card-link">Demo Preview ↗</a>
-          </div>
-        </article>
-
-        <!-- Project Card 5 -->
-        <article class="project-card" data-category="tool">
-          <div class="card-top">
-            <span class="card-category">CLI &amp; Tools</span>
-            <span class="card-status status-sample">Sample</span>
-          </div>
-          <h3 class="card-title">Env Secret Sanitizer</h3>
-          <p class="card-desc">
-            커밋 전 스테이징된 파일에서 API 키, 토큰, 개인 식별 정보 패턴을 사전 감지하고 `.env.example` 템플릿을 자동 갱신하는 훅 도구입니다.
-          </p>
-          <ul class="tech-tags">
-            <li>Go</li>
-            <li>Regex</li>
-            <li>Git Hooks</li>
-          </ul>
-          <div class="card-links">
-            <a href="https://github.com/bovogith" target="_blank" rel="noopener noreferrer" class="card-link">Repository ↗</a>
-          </div>
-        </article>
-
-        <!-- Project Card 6 -->
-        <article class="project-card" data-category="ai">
-          <div class="card-top">
-            <span class="card-category">AI &amp; Data</span>
-            <span class="card-status status-sample">Sample</span>
-          </div>
-          <h3 class="card-title">Log Anomaly Detector</h3>
-          <p class="card-desc">
-            대규모 애플리케이션 로그에서 비정상 에러 급증 구간과 패턴 변화를 탐지하여 요약 리포트를 생성하는 데이터 분석 모듈입니다.
-          </p>
-          <ul class="tech-tags">
-            <li>Python</li>
-            <li>Pandas</li>
-            <li>Scikit-learn</li>
-          </ul>
-          <div class="card-links">
-            <a href="https://github.com/bovogith" target="_blank" rel="noopener noreferrer" class="card-link">Notebook ↗</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Tech Stack Section -->
-    <section id="skills" class="section container">
-      <h2 class="section-title">Tech Stack &amp; Focus Areas</h2>
-      <p class="section-subtitle">주로 활용하는 기술 스택과 관심 영역입니다.</p>
-
-      <div class="stack-grid">
-        <div class="stack-card">
-          <h3>Frontend &amp; UI</h3>
-          <p>가볍고 접근성 높은 웹 인터페이스 및 상태 관리</p>
-          <div class="stack-pills">
-            <span>TypeScript</span>
-            <span>JavaScript (ES6+)</span>
-            <span>React / Next.js</span>
-            <span>HTML5 / CSS3</span>
-          </div>
-        </div>
-        <div class="stack-card">
-          <h3>Backend &amp; API</h3>
-          <p>확장 가능한 REST/GraphQL API 설계 및 비동기 처리</p>
-          <div class="stack-pills">
-            <span>Node.js</span>
-            <span>Python / FastAPI</span>
-            <span>Go</span>
-            <span>PostgreSQL / Redis</span>
-          </div>
-        </div>
-        <div class="stack-card">
-          <h3>DevOps &amp; Tooling</h3>
-          <p>CI/CD 파이프라인 자동화 및 컨테이너 환경 구성</p>
-          <div class="stack-pills">
-            <span>Git / GitHub Actions</span>
-            <span>Docker</span>
-            <span>Linux / Bash</span>
-            <span>Cloudflare / GitHub Pages</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Dev Notes / Principles Section -->
-    <section id="logs" class="section container">
-      <h2 class="section-title">Repository Policy</h2>
-      <div class="policy-box">
-        <div class="policy-item">
-          <span class="policy-num">01</span>
-          <div>
-            <h4>Privacy-First Publishing</h4>
-            <p>본 페이지는 민감한 개인 정보나 사내 비공개 자산을 일절 포함하지 않으며, 오직 퍼블릭 공개가 가능한 오픈소스 코드와 아키텍처 샘플만 게시합니다.</p>
-          </div>
-        </div>
-        <div class="policy-item">
-          <span class="policy-num">02</span>
-          <div>
-            <h4>Reproducible Code</h4>
-            <p>모든 공개 프로젝트는 독립된 환경에서 즉시 실행하고 검증할 수 있도록 명확한 `README.md`와 실행 가이드를 지향합니다.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> <strong>bovogith</strong> · Hosted on GitHub Pages</p>
-      <a href="https://github.com/bovogith/github.io" target="_blank" rel="noopener noreferrer">Source on GitHub ↗</a>
+  </section>
+  <section class="section wrap" id="expertise">
+    <div class="section-head"><p class="eyebrow">PROFESSIONAL PROFILE</p><h2>핵심 역량과 기술 활용 범위</h2><p class="lead">C++, Node.js 기반 분산 게임 서버 구현, 웹 서비스, AI 활용 개발·운영 실무 아키텍트</p></div>
+    <div class="grid expertise">
+      <article class="card"><p class="eyebrow">SERVER FRAMEWORK</p><h3>Node.js 기반 분산 서버 프레임워크</h3><p>Node.js · WebSocket · RPC 기반 개발 및 게임 서버 적용</p></article>
+      <article class="card"><p class="eyebrow">ARCHITECTURE</p><h3>C++ 분산 서버·플랫폼 설계</h3><p>네트워크 구조 분리, 확장성·성능·변경 대응</p></article>
+      <article class="card"><p class="eyebrow">IMPLEMENTATION</p><h3>서버·DB·서비스 통합 개발</h3><p>게임 서버, Web/API, DB, 클라이언트 연동</p></article>
+      <article class="card"><p class="eyebrow">OPERATIONS</p><h3>운영 환경까지 직접 구축</h3><p>Linux · AWS · 배포 · DB 튜닝 및 운영툴</p></article>
+      <article class="card"><p class="eyebrow">AI ENGINEERING</p><h3>AI 활용 개발과 디버깅</h3><p>코딩 에이전트 · IDE 디버깅 · 로컬 AI 통합</p></article>
+    </div><div class="band"><h3>기술 선택 기준</h3><p>인력 구성 · 개발 생산성 · 유지보수 · 운영비용 · 서비스 변화 대응</p></div>
+  </section>
+  <section class="section wrap" id="experience">
+    <div class="section-head"><p class="eyebrow">CURRENT ENGINEERING</p><h2>현 직장 | 게임 서버 프레임워크 재구축</h2><p class="lead">2022.03–현재  ·  게임 서버 개발 팀장 / 서버·DB·클라우드 실무 병행</p></div>
+    <div class="grid ">
+      <article class="card"><h3>기술 판단과 구현</h3><ul><li>C++, Rust, Go, Node.js를 비교, Node.js/TS 채택(회사 선호, 개발자 풀)</li><li>RPC · WebSocket · FlatBuffers 기반 통신 구조 구축</li><li>핵심 통신 모듈과 게임 로직의 구조적 분리, 클라우드 확장 구조</li><li>MongoDB · MySQL · Redis 연결 및 데이터 흐름 설계</li></ul></article>
+      <article class="card"><h3>기획 변경에 따른 유연한 대응</h3><ul><li>캐주얼 RPG → 심리스 MMORPG → 룸 방식 ·매칭</li><li>블록체인 플랫폼 → Steam 연동 → AWS 독립 서비스</li><li>게임·서비스 방향 변경마다 백엔드와 DB 재구성</li><li>클라이언트 연동 및 CBT 단계 테스트 수행</li></ul></article>
+    </div><div class="band"><h3>핵심 기여</h3><p>프레임워크를 직접 설계·개발하고, 반복적인 서비스 전환을 1인 개발 체계로 대응</p></div>
+  </section>
+  <section class="section wrap" id="workflow">
+    <div class="section-head"><p class="eyebrow">AI-ASSISTED DEVELOPMENT</p><h2>업무 방식 : AI 개발 도구를 활용한 서비스 구현·검증</h2><p class="lead">AI 코딩 에이전트로 빠른 MVP 모델 구현, 기획 변경 반복, 개발툴 기반 디버깅으로 완성도를 검증</p></div>
+    <div class="grid ">
+      <article class="card"><p class="eyebrow">01</p><h3>개발 방법론적 변화</h3><p>기획서 검토 중심에서 요구분석-데모구현 중심으로 전환</p><p>초기 아키텍처, 기반 기술의 신중한 결정의 중요성</p></article>
+      <article class="card"><p class="eyebrow">02</p><h3>AI 활용 한 빠른 생산성</h3><p>Codex · Claude Code, Antigravity 등 교차 체크 활용. AI 에이전트 효율적 작업 관리로 대규모 프로젝트 일관성 유지 다수 개발 랭귀지에 대한 기초 학습으로 사용 언어 제한 극복</p></article>
+      <article class="card">
+        <p class="eyebrow">03</p>
+        <h3>운영, 디버깅 대비</h3>
+        <p>GUI 테스트 툴을 제작해 기능을 즉시 검증하고 서비스 완성도를 높임</p>
+        <p>AI 에이전트가 같은 실수를 반복할 때는 전통적인 디버깅 방법을 활용</p>
+        <p>운영, 보안, 인프라 설계에 기존 서비스 경험 반영</p>
+      </article>
+      <article class="card"><p class="eyebrow">04</p><h3>서비스 통합·런칭 준비</h3><p>웹·서버·DB·AI 연동, 배포 구성 및 출시 준비 단계 검증. DevOps 경험 적용, 클라우드 서비스로 운영 자동화 극대화</p></article>
     </div>
-  </footer>
-
-  <script src="script.js"></script>
+  </section>
+  <section class="section wrap" id="projects">
+    <div class="section-head"><p class="eyebrow">Ai Projects A</p><h2>로컬 AI 모델 구동 : Ai 활용범위, 성능 체크 프로젝트</h2><p class="lead">임베딩 · 경량 LLM · 의사결정 모델을 실제 서비스의 데이터·로직 계층과 연결</p></div>
+    <div class="grid three">
+      <article class="card"><h3>AiEventTrig</h3><p class="project-type">게임 NPC 의사결정</p><p>게임 엔티티 상태·속성·환경 제약에 따라 자율 행동과 동적 결과를 결정하는 구조를 실험</p><p>게임 AI / NPC &amp; 건물 등의 조건·상태 기반 다양한 동적 전개, 로컬 PC용 AI</p></article>
+      <article class="card"><h3>AiJobSearch</h3><p class="project-type">자연어 채용 매칭</p><p>채용 공고 수집·정규화 및 키워드 선별 후 자연어 요청 임베딩 AI 유사도 매칭 매칭을 구현</p><p>검색 / SQLite·임베딩·LLM API</p></article>
+      <article class="card"><h3>LandMaru</h3><p class="project-type">AI 토지 검색</p><p>토지 분산 매물의 수집·저장과 자연어 질의를 구조적 검색 조건으로 변환하는 기능 개발</p><p>웹 스크래핑 (AI 도입 전) / 자연어 검색 / DB</p></article>
+    </div><p class="common">공통 기반: Nodejs, Rust, Ollama-cpp, 로컬 모델 실행, Embeddinggemma-2, Qwen3-Embedding, TF</p>
+  </section>
+  <section class="section wrap" id="game-rd">
+    <div class="section-head"><p class="eyebrow">Ai Projects B</p><h2>Game R&amp;D 및 서비스 : 기획,개발,그래픽,서비스 전범위 진행</h2><p class="lead">네트워크 게임 구현, 동적 세계 생성, 심리스 월드, 콘텐츠 도구 제작과 플랫폼 확장 실험</p></div>
+    <div class="grid ">
+      <article class="card"><h3>Cosmic Drift · Cosmic Battle</h3><p>무한 우주 항해·채굴·탐사·전투 / 위치·Seed 기반 월드 확정 / 웹 기반 성능 검증</p></article>
+      <article class="card"><h3>월드 생성·2.5D 지형 도구</h3><p>월드 구조 생성·편집 / 2D 이미지 기반 2.5D 지형 자동 생성 파이프라인</p></article>
+      <article class="card"><h3>Mine Frontier</h3><p>지뢰찾기 규칙을 결합한 러닝 게임 / 게임 모드·진행 구조·클라이언트 로직 설계</p></article>
+      <article class="card"><h3>ChainExpansion</h3><p>실시간 네트워크 배틀 / WebSocket 동기화 및 서비스 구조·플랫폼 연동 실험</p></article>
+    </div><p class="common">공통 기반  |  Node.js · TypeScript · Linux · HTML5, Canvas, Tauri</p>
+  </section>
+  <section class="section wrap" id="web-mvp">
+    <div class="section-head"><p class="eyebrow">Ai Projects C</p><h2>웹 서비스, 유틸리티 MVP 개발</h2><p class="lead">설계·구현·DB·API·배포를 연결하는 소규모 독립 개발 실험</p></div>
+    <div class="grid three">
+      <article class="card"><h3>VibeBook</h3><p>위치 기반 취향 등록 &amp; 소셜 네트워킹</p><p>Next.js / NestJS</p></article>
+      <article class="card"><h3>NowShot</h3><p>현장 사진 실시간 공유, 커뮤니티</p><p>Remix / 웹서비스</p></article>
+      <article class="card"><h3>WeAre</h3><p>익명 위치 기반 소셜 서비스</p><p>위치·백엔드 로직</p></article>
+      <article class="card"><h3>RemoteView</h3><p>원격 영상 P2P 실시간 스트리밍</p><p>실시간 미디어 전송</p></article>
+      <article class="card"><h3>SmartFinger</h3><p>카레라 영상 처리, AI 학습 유틸리티</p><p>AI 응용·유틸리티</p></article>
+    </div><p class="common">공통 기반  |  Node.js · TypeScript · Linux · PM2 · Docker · Cloudflare · GitHub Actions</p>
+  </section>
+  <section class="section wrap" id="career">
+    <div class="section-head"><p class="eyebrow">SELECTED CAREER &amp; PROJECTS</p><h2>주요 경력 | 회사 — 프로젝트 — 역할</h2><p class="lead">대형 게임사 · 창업 · 중견/스타트업  |  1999–2026 주요 실무 경력</p></div>
+    <div class="table-scroll" role="region" aria-label="회사별 대표 프로젝트와 핵심 역할" tabindex="0">
+      <table>
+        <thead><tr><th scope="col">회사 / 조직</th><th scope="col">대표 프로젝트</th><th scope="col">핵심 역할</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">네오위즈</th><td>보드게임 서버, CGS · VNA · FPS PMS</td><td>C++ 분산 서버, IOCP·네트워크 라이브러리</td></tr>
+          <tr><th scope="row">웹젠</th><td>온라인게임, WOPS 서비스</td><td>인증·빌링·DB 통합 서비스 플랫폼 개발 리딩, 서버 개발</td></tr>
+          <tr><th scope="row">KTH</th><td>온라인 게임, 유무선 서비스 플랫폼</td><td>온라인·모바일·IPTV 통합 및 플랫폼 개발, 서비스 런칭</td></tr>
+          <tr><th scope="row">스마일게이트</th><td>게임 통합 Echo-Platform</td><td>웹·게임 플랫폼 및 기술 조직 리딩, 플랫폼 설계</td></tr>
+          <tr><th scope="row">위메이드</th><td>스마트 게임 플랫폼</td><td>게임 플랫폼·카카오톡 연동 설계, 기술 조직 리딩</td></tr>
+          <tr><th scope="row">마이리그</th><td>게임 전적·매칭 웹서비스</td><td>LOL 로그 데이터 수집·백엔드·DB 개발, 튜닝</td></tr>
+          <tr><th scope="row">지피엠</th><td>온라인 게임 서비스</td><td>온라인 게임 서버 개발, AI/AR 연동·AWS 운영</td></tr>
+          <tr><th scope="row">프리즘넷</th><td>글로벌 모바일 게임 플랫폼</td><td>Unity 기반 모바일 게임 서비스 및 해외 런칭 기술 리딩</td></tr>
+          <tr><th scope="row">시현소프트, 파이온</th><td>모바일 게임, AI 콘텐츠 · IoT 장치</td><td>게임 개발·출시·정부 과제, 외주 개발</td></tr>
+          <tr><th scope="row">현재</th><td>MMO 게임 서버, 서비스, 서버 운영</td><td>네트워크 전용서버, 지원용 툴, 배포 관리, AWS, 사내서버 셋팅&amp;관리</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <section class="section wrap" id="maker">
+    <div class="section-head"><p class="eyebrow">ENGINEERING BREADTH</p><h2>IoT · 하드웨어 제작 · 기술 자격</h2><p class="lead">소프트웨어 시스템을 센서·디바이스·실물 시제품까지 확장한 엔지니어링 경험</p></div>
+    <div class="grid ">
+      <article class="card"><h3>IoT / Maker</h3><ul><li>Arduino · ESP32 펌웨어 및 센서 연동</li><li>온습도·공기질·광량·토양수분·릴레이 제어</li><li>스마트 스위치·공기질 측정기·스마트 화분 제작</li><li>Fusion 360  모델링 · 3D 프린팅 · CNC 시제품 제작</li></ul></article>
+      <article class="card"><h3>기타 학습</h3><ul><li>소방설비기사: 전기 · 기계</li><li>비파괴검사기사: 초음파 · 방사선</li></ul></article>
+    </div><div class="band"><h3>추가 경험</h3><p>센서&amp;디바이스 제어 미들웨어 · AI 응용 동작&amp;자세 분석 · 공장자동화&amp;인터넷 품질 측정 솔루션</p><p>교육 : AWS 101, 3D 모델링 Maker</p></div>
+  </section>
+  <section class="section wrap" id="stack">
+    <div class="section-head"><p class="eyebrow">TECHNICAL COVERAGE &amp; PROFILE</p><h2>기술 스택 · 기본 경력 정보</h2></div>
+    <div class="grid ">
+      <article class="card"><h3>SERVER / NETWORK</h3><p>C++ · Node.js/TS · IOCP · WebSocket · RPC · FlatBuffers</p></article>
+      <article class="card"><h3>DATA / CLOUD</h3><p>MySQL · PostgreSQL · MongoDB · Redis · Linux · AWS</p></article>
+      <article class="card"><h3>WEB / CLIENT</h3><p>React · Next.js · NestJS · Unity · Electron · Tauri</p></article>
+      <article class="card"><h3>AI / DEV TOOLS</h3><p>Codex · Claude Code · VS Code · Local AI · Python</p></article>
+    </div>
+    <div class="background">
+      <h3>기본 정보</h3>
+      <dl>
+        <div><dt>성명</dt><dd>박장식 (Park Jang-sik)</dd></div>
+        <div><dt>이메일</dt><dd><a href="mailto:bovogoog@gmail.com">bovogoog@gmail.com</a></dd></div>
+        <div><dt>총 경력</dt><dd>20년 +</dd></div>
+        <div><dt>학력</dt><dd>동아대학교 금속공학과 졸업 (1997. 2)</dd></div>
+        <div><dt>병역</dt><dd>해군 병장 제대</dd></div>
+        <div><dt>교육 수료</dt><dd>프로그래밍 교육  · 세종대 사회교육원 (6개월)<br>· 비트교육센터 (6개월)</dd></div>
+      </dl>
+    </div>
+  </section>
+  <section class="section wrap" id="snapshots">
+    <div class="section-head"><p class="eyebrow">PROJECT SNAPSHOTS</p><h2>실제 프로젝트 화면</h2><p class="lead">이미지를 선택하면 원본 크기로 볼 수 있습니다.</p></div>
+    <h3 class="gallery-label">실제 프로젝트 화면 | 01</h3>
+    <div class="gallery">
+      <figure>
+          <a href="images/github.png" aria-label="GitHub 원본 이미지 열기"><img src="images/github.png" alt="GitHub 프로젝트 화면" width="1081" height="869" loading="lazy" decoding="async"></a>
+          <figcaption><span>01</span> GitHub</figcaption>
+        </figure>
+      <figure>
+          <a href="images/ai-event-trig.png" aria-label="AiEventTrig 원본 이미지 열기"><img src="images/ai-event-trig.png" alt="AiEventTrig 프로젝트 화면" width="1608" height="807" loading="lazy" decoding="async"></a>
+          <figcaption><span>02</span> AiEventTrig</figcaption>
+        </figure>
+      <figure>
+          <a href="images/ai-job-search.png" aria-label="AiJobSearch 원본 이미지 열기"><img src="images/ai-job-search.png" alt="AiJobSearch 프로젝트 화면" width="1472" height="1077" loading="lazy" decoding="async"></a>
+          <figcaption><span>03</span> AiJobSearch</figcaption>
+        </figure>
+      <figure>
+          <a href="images/relic-drift.png" aria-label="RelicDrift 원본 이미지 열기"><img src="images/relic-drift.png" alt="RelicDrift 프로젝트 화면" width="1428" height="897" loading="lazy" decoding="async"></a>
+          <figcaption><span>04</span> RelicDrift</figcaption>
+        </figure>
+    </div>
+    <h3 class="gallery-label">실제 프로젝트 화면 | 02</h3>
+    <div class="gallery">
+      <figure>
+          <a href="images/chain-expansion.png" aria-label="Chain Expansion 원본 이미지 열기"><img src="images/chain-expansion.png" alt="Chain Expansion 프로젝트 화면" width="1694" height="960" loading="lazy" decoding="async"></a>
+          <figcaption><span>05</span> Chain Expansion</figcaption>
+        </figure>
+      <figure>
+          <a href="images/mine-frontier.png" aria-label="MineFrontier 원본 이미지 열기"><img src="images/mine-frontier.png" alt="MineFrontier 프로젝트 화면" width="464" height="796" loading="lazy" decoding="async"></a>
+          <figcaption><span>06</span> MineFrontier</figcaption>
+        </figure>
+      <figure>
+          <a href="images/now-shot.png" aria-label="NowShot 원본 이미지 열기"><img src="images/now-shot.png" alt="NowShot 프로젝트 화면" width="750" height="1334" loading="lazy" decoding="async"></a>
+          <figcaption><span>07</span> NowShot</figcaption>
+        </figure>
+      <figure>
+          <a href="images/relic-drift-map.png" aria-label="RelicDrift Map 원본 이미지 열기"><img src="images/relic-drift-map.png" alt="RelicDrift Map 프로젝트 화면" width="1896" height="1054" loading="lazy" decoding="async"></a>
+          <figcaption><span>08</span> RelicDrift Map</figcaption>
+        </figure>
+      <figure>
+          <a href="images/terrain-data-tool.png" aria-label="Terrain Data Tool 원본 이미지 열기"><img src="images/terrain-data-tool.png" alt="Terrain Data Tool 프로젝트 화면" width="1454" height="911" loading="lazy" decoding="async"></a>
+          <figcaption><span>09</span> Terrain Data Tool</figcaption>
+        </figure>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="wrap"><span>PARK JANG-SIK  ·  ENGINEERING PORTFOLIO  ·  2026</span><a href="#top">맨 위로 <span aria-hidden="true">↑</span></a></div>
+</footer>
 </body>
 </html>

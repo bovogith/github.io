@@ -1,0 +1,13 @@
+{
+  "name": "profile-share",
+  "private": true,
+  "scripts": {
+    "predev": "node scripts/prepare-assets.mjs",
+    "dev": "wrangler dev",
+    "predeploy": "node scripts/prepare-assets.mjs",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
